@@ -1,8 +1,9 @@
 #root {
-  max-width: 1280px;
+  max-width: 100vw;
+  max-height: 100vh;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  
 }
 
 #screen {
@@ -50,4 +51,12 @@
 #enter:focus,enter:focus-visible{
   outline: 2px solid rgb(255, 25, 25) ;
   border-color: rgba(255, 255, 255, 0);
+}
+
+#screenModeWrapper{
+  display:flex;
+  justify-content: end;
+}
+#nightkey{
+
 }

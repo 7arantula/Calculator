@@ -7,6 +7,9 @@ function App() {
   const [expression, setExpression]= useState("");
   const [isFirstDigit, setFirstDigit] = useState (false);
   const [smallScreenDisplay, setSmallScreenDisplay] = useState("0");
+  const [darkMode , setDarkMode] = useState(true);
+  const [fillColor , setFill] = useState("#1a1a1a");
+  const [shade , setShade] = useState("#242424");
 
   function display(value)
   {
@@ -66,12 +69,44 @@ function App() {
     // console.log(expression);
   }
 
+  function cycle()
+  {
+    if(darkMode===true)
+    {
+      setDarkMode(false);
+      console.log("Light");
+      setFill("#ffffff09")
+      setShade("#e4e4e4ff");
+    }
+    else{
+      setDarkMode(true);
+      console.log("Dark");
+      setFill("#1a1a1a")
+      setShade("#242424");
+    }
+  }
+
   return (
     <>
+    <div  style={{display:'grid',placeContent:"center",height: "100vh" ,width: "100vw" ,backgroundColor: shade}}>
+      <div id='screenModeWrapper'>
+          <button onClick={() => cycle()}>
+            <svg
+            viewBox='0 0 60 60'
+            width="60"
+            height="60"
+            fill="none"
+            stroke="white"
+            strokeWidth="2" 
+            >
+              <circle cx='30' cy='30' r='15' stroke='white' strokeWidth='2' fill='white'/>
+              <circle cx='35' cy='24' r='13' stroke='white' strokeWidth='0' fill={fillColor}/>
+            </svg>
+          </button>
+      </div>
       <div id="screen">
         <p id='smallScreen'>{smallScreenDisplay}</p>
-        <h1 id='solution'>{screenDisplay}</h1>
-          
+        <h1 id='solution'>{screenDisplay}</h1> 
       </div>
       <div className="row">
           <button className = "keys" onClick={() => display("%")}>%</button>
@@ -110,6 +145,7 @@ function App() {
           <button className = "keys" onClick={() => display("0")}>0</button>
           <button className = "keys" onClick={() => display(".")}>.</button>
           <button className = "keys" onClick={() => display("-")}>-</button>
+      </div>
       </div>
     </>
 
