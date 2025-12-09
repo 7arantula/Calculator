@@ -1,0 +1,53 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+#screen {
+    margin: 2px;    
+    color: black;
+    background-color: rgb(76, 91, 91);
+    border-radius: 5px;
+    border-width: 4px;
+    border: 10px solid rgba(255, 255, 255, 0.445);
+}
+#solution{
+    border-top:4px double rgba(0, 0, 0, 0.3) ;
+    padding-top: 20px;
+    font-size: 30px;
+    color: white;
+
+}
+#smallScreen{
+  display: flex;
+  justify-content: end;
+  margin-right: 20px;
+  font-size: 20px;
+  color:rgba(0, 0, 0, 0.3);
+}
+
+.keys{
+  margin: 2px;
+  padding: 25px;
+}
+
+.row{
+  display: grid;
+  grid-template-columns: repeat(4,80px);
+}
+
+#enter{
+  padding: 23px;
+  background-color: rgba(0, 255, 255, 0.9);
+  color: black;
+  border: 2px solid transparent;
+}
+#enter:hover{
+    border-color: rgb(255, 0, 0);
+}
+#enter:focus,enter:focus-visible{
+  outline: 2px solid rgb(255, 25, 25) ;
+  border-color: rgba(255, 255, 255, 0);
+}
