@@ -20,7 +20,7 @@ function App() {
         setFirstDigit(false);
       }
 
-    if("%*-+./".includes(last)&&"%*-+./".includes(value))
+    if("%*-+./".includes(last)&&"%*-+/".includes(value))
       {
         return;
       }

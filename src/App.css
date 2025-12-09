@@ -41,16 +41,17 @@
 
 #enter{
   padding: 23px;
-  background-color: rgba(0, 255, 255, 0.9);
+  background-color: rgba(0, 225, 255, 0.85);
   color: black;
-  border: 2px solid transparent;
+  border: 3px solid transparent;
 }
 #enter:hover{
-    border-color: rgb(255, 0, 0);
+    border-color: rgb(255, 255, 255);
 }
+
 #enter:focus,enter:focus-visible{
-  outline: 2px solid rgb(255, 25, 25) ;
-  border-color: rgba(255, 255, 255, 0);
+  outline: 1px solid rgb(255, 255, 255) ;
+  background-color: rgba(0, 180, 255, 0.85);
 }
 
 #screenModeWrapper{
